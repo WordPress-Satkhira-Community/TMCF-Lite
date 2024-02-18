@@ -227,12 +227,12 @@ class TM_Settings {
 							</div>
 							<div class="field-component field-key">
 								<div class="field-meta">
-									<label><?php _e( 'Name/Key', 'tmcf_lite' ); ?> <span style="color: red;">*</span></label>
-									<p><?php _e( 'Name/Key field will be stored in the database and will help to display on your website. Should contain only Latin letters, numbers, "-" or "_" chars.', 'tmcf_lite' ); ?></p>
+									<label><?php esc_html_e( 'Name/Key', 'tmcf_lite' ); ?> <span style="color: red;">*</span></label>
+									<p><?php esc_html_e( 'Name/Key field will be stored in the database and will help to display on your website. Should contain only Latin letters, numbers, "-" or "_" chars.', 'tmcf_lite' ); ?></p>
 								</div>
 								<div class="field-control">
 									<input type="text" class="key" name="tmcf_fields[<?php echo $key; ?>][key]" value="<?php echo $item['key']; ?>" placeholder="<?php _e( 'Key', 'tmcf_lite' ); ?>" required>
-									<p class="error"><?php _e( 'Key is already exist.', 'tmcf_lite' ); ?></p>
+									<p class="error"><?php esc_html_e( 'Key is already exist.', 'tmcf_lite' ); ?></p>
 								</div>
 							</div>	
 
@@ -243,7 +243,7 @@ class TM_Settings {
 								</div>
 								<div class="field-control">
 									<select name="tmcf_fields[<?php echo $key; ?>][type]" required>
-										<option value=""><?php _e( 'Select Field Type', 'tmcf_lite' ); ?></option>
+										<option value=""><?php esc_html_e( 'Select Field Type', 'tmcf_lite' ); ?></option>
 										<?php foreach ($this->fields_type() as $field_key => $field): ?>
 											<option value="<?php echo $field_key ?>" <?php echo selected( $item['type'], $field_key ); ?>><?php echo $field; ?></option>						
 										<?php endforeach ?>
@@ -253,16 +253,16 @@ class TM_Settings {
 
 							<div class="field-component field-option" data-type="<?php echo $item['type']; ?>">
 								<div class="field-meta">
-									<label><?php _e( 'Field Options', 'tmcf_lite' ); ?></label>
-									<p><?php _e( 'Field Options will be show in field type option.', 'tmcf_lite' ); ?></p>							
+									<label><?php esc_html_e( 'Field Options', 'tmcf_lite' ); ?></label>
+									<p><?php esc_html_e( 'Field Options will be show in field type option.', 'tmcf_lite' ); ?></p>							
 								</div>
 								<div class="field-control">
 									<div class="field-control-option">
 										<table>
 											<thead>
 												<tr>
-													<th><?php _e( 'Name', 'tmcf_lite' ); ?></th>
-													<th><?php _e( 'Value', 'tmcf_lite' ); ?></th>
+													<th><?php esc_html_e( 'Name', 'tmcf_lite' ); ?></th>
+													<th><?php esc_html_e( 'Value', 'tmcf_lite' ); ?></th>
 													<th></th>
 													<th></th>
 												</tr>
